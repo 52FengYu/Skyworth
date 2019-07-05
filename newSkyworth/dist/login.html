@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html style="background: #FFF;">
+<head>
+    <meta charset="UTF-8">
+    <title>创维集团-全球电商-登录</title>
+    <link href="css/login.css" rel="stylesheet" type="text/css">
+    <link href="css/iconfont.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="https://www.skyworthds.com/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/jquery.step.js"></script>
+    <script src="js/common.js"></script>
+    <script type="text/javascript" src="js/ajax.js"></script>
+    <script type="text/javascript" src="js/tool.js"></script>
+    <script type="text/javascript">
+        window.onload = function(){
+        //获取登录按钮
+        var oSubmit = document.getElementById("btnLogin");
+        var oColwaring = document.getElementById("colwarning");
+        var aInputs = document.getElementsByTagName("input");
+
+        oSubmit.onclick = function(){
+             if(oInput.value.toLowerCase() === oDiv.innerHTML.toLowerCase()){
+                    
+            }else{
+                alert("验证码错误");
+                // document.getElementById("code").value = "";
+                oDiv.innerHTML = testCode(6);
+                code.value = "";
+                return false;
+            }
+            $ajax({
+                type:"post",
+                url:"data/login.php",
+                data:{
+                    username:aInputs[0].value,
+                    password:aInputs[1].value,
+                },
+                success:function(msg){
+                    var obj = JSON.parse(msg);
+                    if(obj.code){
+                        oColwaring.style.display = 'block';
+                        oColwaring.innerHTML = obj.message;
+                    }else{
+                        oColwaring.style.display = 'block';
+                        oColwaring.className = "alert alert-success";
+                        oColwaring.innerHTML = obj.message;
+                        
+                        setTimeout(function(){
+                            location.assign("home.html");
+                        },1000);
+                    }
+                },
+                error:function(msg){
+                    alert(msg);
+                }
+
+            })
+        }
+                    //验证码
+         var oBtn = document.getElementById("spn1");//换张图片
+            var oDiv = document.getElementById("alert");//验证码000000外面的盒子
+            var oSubmit = document.getElementById("btnLogin");//button
+            var oInput = document.getElementById("code");//验证码输入框
+            
+            oDiv.innerHTML = testCode(6);
+            
+            oBtn.onclick = function(){
+                oDiv.innerHTML = testCode(6);
+            }
+    }
+    </script>
+</head>
+
+<body>
+    <header class="login_head no-shadow">
+        <div class="login_top">
+            <div class="login_top_right">没有账号？ <a href="#">请注册</a></div>
+            <div class="login_top_left">
+                <a href="#">
+                    <img src="https://shop.skyworth.com/images/logo.png"></a>
+            </div>
+        </div>
+    </header>
+    <div class="login_container">
+        <div class="login_wrap clearfix">
+            <div class="login_left">
+                <img src="https://shop.skyworth.com/images/login_ad.png">
+            </div>
+            <div class="login_right">
+                <ul class="order_mid_ul">
+                    <li style="font-size: 24px;">会员登录</li>
+                </ul>
+                <div class="login_content clearfix">
+                    <div class="order_mid_wrap on">
+                        <div class="login_input_wrap">
+                            <input type="text" id="lid" class="login_input_border" placeholder="邮箱/手机号/用户名">
+                        </div>
+                        <div class="login_input_wrap">
+                            <input type="password" id="pwd" class="login_input_border" placeholder="请输入登录密码">
+                        </div>
+                        <div class="login_input_wrap">
+                            <input type="text" id="code" class="login_input_ma" placeholder="请输入验证码">
+                            <span class="login_span">
+                                <div id = 'alert' class="alert alert-primary" style="width: 60px;height:35px;position: relative;top:5px;left: 30px;line-height: 40px;padding: 0;margin:0" role="alert">   000000
+                                </div>
+                                <a style="cursor:pointer;position: relative;top:-30px" id="spn1">换一张</a>
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <div id="colwarning" class="alert alert-danger">错误警告</div>
+                        </div>
+                        <div class="login_input_wrap">
+                            <input type="button" class="login_blue_button" id="btnLogin" value="登录" onclick="IsLogin();">
+                        </div>
+                        <div class="login_input_wrap">
+                            <div class="login_label">
+                                <label>
+                                    <input type="checkbox" id="isDay" class="login_check">30天内记住我的登录信息</label>
+                            </div>
+                            <div class="login_forget"><a href="#">忘记密码？</a>/ <a href="#">注册</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="other_login" style="display: none;">
+                    <div class="login_other_title"><span></span>其它登录方式<span></span></div>
+                    <ul class="other_style">
+                        <li class="qq"><a href="javascrpt:;"><i class="iconfont icon-qq"></i></a></li>
+                        <li class="wechat"><a href="javascrpt:;"><i class="iconfont icon-weixin"></i></a></li>
+                        <li class="weibo"><a href="javascrpt:;"><i class="iconfont icon-icon1460188586201"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="login_footer">
+        <div class="login_foot">
+            <ul>
+                <li>关于我们</li>
+                <li>|</li>
+                <li>联系我们</li>
+                <li>|</li>
+                <li>自助服务</li>
+                <li>|</li>
+                <li>友情链接</li>
+                <li>|</li>
+                <li>关注我们</li>
+                <li>|</li>
+                <li>购买流程</li>
+                <li>|</li>
+                <li>安装调试</li>
+                <li>|</li>
+                <li>税票制度</li>
+            </ul>
+            <p>ICP备案证号：粤ICP备09157852号</p>
+        </div>
+    </footer>
+</body>
+</html>

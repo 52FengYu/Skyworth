@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>创维官方商城——权威官网 彩电领导者</title>
+		<meta name="description" content="创维商城 创维集团官方唯一指定商城  创维全品类一站购买">
+		<meta name="keywords" content="创维,创维官网,创维电视官网,创维空调官网,创维商城,创维商城首页,创维网上商城,创维冰洗商城,创维数字商城,创维双11" />
+		<link rel="shortcut icon" href="https://www.skyworthds.com/favicon.ico">
+		<link href="css/iconfont.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/login.css">
+		<!-- <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+		<script src="js/common.js"></script>
+		<script type="text/javascript" src="js/jquery.cookie.js"></script> -->
+		<script src="js/require.js" defer async="true" data-main="js/home-main"></script>
+<!-- 		<script>
+		$(function(){
+			$.ajax({
+			url: "data/home.json",
+			success: function(arr){
+				//通过循环，将数据添加到我们的页面上
+				for(var i = 0; i < 8; i ++){
+					var ul = $("<ul></ul>");
+					var li =$("<li></li>");
+					$(`		
+						
+							<a href="#"><i class="icon_float iconfont icon-gengduojiantou"></i>${arr[i].span}</a>
+		       	 				
+						`)
+					.appendTo(li);
+					var child = arr[i].child;
+					for(var j = 0; j < child.length ; j ++){
+						$(`
+							<li><a href="#" target="_blank" >${child[j].title}</a></li>
+							`).appendTo(ul);
+	
+					}
+						ul.appendTo(li);
+						li.appendTo(".nav_cont");
+				}
+			},
+			error: function(msg){
+				alert("请求错误：" + msg);
+			}
+		})
+	})
+		</script>
+	 -->	
+	 <style>
+	 	.top_li_wrap .top_img_nov {
+			 top: 40px;
+    		left: -55px;
+		}
+		.wx-tips {
+			   top: 180px;
+    		left:-55px;
+		}
+		.banner_img{
+			width:7680px;
+		}
+		.banner_img li{
+			width:1920px;
+		}
+	 </style>
+	</head>
+	<body>
+		<!-- header -->
+		<div class="header">
+			<div class="head">
+				<div class="head_left">
+					<div class="head_position">
+						<div class="head_welcome">欢迎您，来到创维官方商城</div>
+					</div>
+				</div>
+				<div class="head_right">
+					<ul>
+						<li><a href="login.html">登录</a></li>
+						<li><a href="register.html">注册</a></li>
+						<li><a href="#">我的订单</a></li>
+						<li class="top_li_wrap">
+							<a href="#">手机端<img src="https://shop.skyworth.com/images/little.png" class="top_img_nov"><p class="wx-tips">请使用微信扫描</p></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- top_wrap -->
+		<div class="top_wrap">
+			<div class="top_content">
+				<div class="logo">
+					<a href="index.html" target="_blank">
+						<img src="https://shop.skyworth.com/images/logo.png">
+					</a>
+				</div>
+				<div class="top_right">
+					<div class="top_search">
+						<div class="top_search_input">
+							<div class="search_input_background">
+								<input type="text" placeholder="输入条件" class="search_input" id = "TopKeyVal">
+							</div>
+							<div class="search_input_icon ripple">
+								<input type="button" class="search_button" onclick="keySelect();"><i onclick="keySelect();" class="iconfont icon-sousuo"></i>
+							</div>
+						</div>
+						<div class="top_search_label">
+							<a href="#">OLED</a>
+							<a href="#">超薄</a>
+							<a href="#">4K超清</a>
+							<a href="#">全民屏</a>
+							<a href="#">防蓝光护眼</a>
+							<a href="#">大屏</a>
+							<a href="#">智能网络</a>
+						</div>
+					</div>
+					<div class="top_service" id = "top_cart">
+						<dl class="shopcart_hover">
+							<dt>
+								<a href="#"><i class="iconfont icon-icon1"></i>我的购物车</a>
+							</dt>
+							<dd>
+								<div class="font_number"></div>
+							</dd>
+						</dl>
+						<div class="shopcart_details">
+							<p>购物车列表<span class="closeCart iconfont icon-guanbi"></span></p>
+							<div class="shopcart_bottom">
+								<span>
+									共<b>0</b>件商品	
+								</span>
+								<span>
+									总计<b>￥0</b>
+								</span>
+								<input type="button" class="shopcart_button" value="去购物车">	
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- main -->
+		<div class="main">
+			<!-- nav -->
+			<div class="nav no_border">
+				<nav class="menu">
+					<div class="menu_first">
+						<ul class="nav_wrap">
+							<li class="all_nav">
+								<a href="#" class="all_nav_a">
+									<i class="iconfont icon-toggle"></i>商品分类
+								</a>
+								<ul class="nav_cont clearfix">
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<ul class="nav_ul">
+						<ul class="nav_ul">
+							<li><a href="#">首页</a></li>
+							<li><a href="#">服务</a></li>
+							<li><a href="#">创维集团</a></li>
+							<li><a href="#">爱内购</a></li>
+						</ul>
+					</ul>
+				</nav>
+			</div>
+			<!-- banner -->
+			<div class="banner_wrap">
+				<div class="banner_bg">
+					<div class="banner_list" style="width:120px">
+						<span class="active"></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+				<!-- 左箭头 -->
+				<div class="banner_left">
+					<img src="https://shop.skyworth.com/images/left.png">
+				</div>
+				<!-- 右箭头 -->
+				<div class="banner_right">
+					<img src="https://shop.skyworth.com/images/right.png">
+				</div>
+				<ul class="banner_img">
+					<li>
+						<a href="#" target="_blank">
+							<img src="https://admin.skyworthds.com/UploadFiles/image/20193235040H5.jpg">
+						</a>
+					</li>
+					<li>
+						<a href="#" target="_blank">
+							<img src="images/banner2.jpg">
+						</a>
+					</li>
+					<li>
+						<a href="#" target="_blank">
+							<img src="https://admin.skyworthds.com/UploadFiles/image/201931029Live2PC.jpg">
+						</a>
+					</li>
+					<li>
+						<a href="#" target="_blank">
+							<img src="https://admin.skyworthds.com/UploadFiles/image/20193235040H5.jpg">
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- container -->
+			<div class="container">
+				<div class="main_wrap no_margin">
+					<!-- 热销 -->
+
+					<!-- 第一栏产品 -->
+					<div class="main_wrap clearfix">
+						<div class="hot_title">
+							<div class="more">
+								<a href="#" target="_blank">查看更多></a>
+							</div>
+							<div class="title_font">电视</div>
+						</div>
+						<div class="flex_wrap" id = "fff">
+							<!-- <div class="list_cont list_cont_three">
+			
+								<div class="hot"></div>
+							</div>
+							<div class="list_cont list_cont_three">
+								
+								<div class="hot"></div>
+							</div>
+							<div class="list_cont list_cont_three">
+								
+								<div class="hot"></div>
+							</div>
+							<div class="list_cont list_cont_three">
+								
+								<div class="hot"></div>
+							</div> -->
+						</div>
+					</div>
+					<!-- 第二栏产品 -->
+					<div class="main_wrap clearfix" >
+						<div class="hot_title">
+							<div class="more">
+								<a href="#" target="_blank">查看更多></a>
+							</div>
+							<div class="title_font">盒子/投影仪</div>
+						</div>
+						<div class="flex_wrap" id = "sss">
+							<!-- <div class="list_cont list_cont_two">
+								<div class="hot"></div>
+							</div>
+							<div class="list_cont list_cont_four">
+								
+								<div class="hot"></div>
+							</div>
+							<div class="list_cont list_cont_four">
+								
+								<div class="hot"></div>
+								<div class="list_hover"></div>
+							</div> -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- container2 -->
+			<div class="container">
+				<div class="main_wrap no_margin">
+					<!-- 第一栏产品 -->
+					<div class="main_wrap clearfix">
+						<div class="hot_title">
+							<div class="more">
+								<a href="#" target="_blank">查看更多></a>
+							</div>
+							<div class="title_font">冰箱</div>
+						</div>
+						<div class="flex_wrap" id = "aaa">
+							<!-- <div class="list_cont list_cont_three">
+								
+								<div class="hot"></div>
+								<div class="list_hover"></div>
+							</div>
+							<div class="list_cont list_cont_three">
+								
+								<div class="hot"></div>
+								<div class="list_hover"></div>
+							</div>
+							<div class="list_cont list_cont_three">
+								
+								<div class="hot"></div>
+								<div class="list_hover"></div>
+							</div>
+							<div class="list_cont list_cont_three">
+								
+								<div class="hot"></div>
+								<div class="list_hover"></div>
+							</div> -->
+						</div>
+					</div>
+					<!-- 第二栏产品 -->
+					<div class="main_wrap clearfix" >
+						<div class="hot_title">
+							<div class="more">
+								<a href="#" target="_blank">查看更多></a>
+							</div>
+							<div class="title_font">洗衣机</div>
+						</div>
+						<div class="flex_wrap" id = "bbb">
+							<!-- <div class="list_cont list_cont_two">
+								
+								<div class="hot"></div>
+							</div>
+							<div class="list_cont list_cont_four">
+								
+								<div class="hot"></div>
+								<div class="list_hover"></div>
+							</div>
+							<div class="list_cont list_cont_four">
+								
+								<div class="hot"></div>
+								<div class="list_hover"></div> -->
+							</div>
+						</div>
+						<div class="main_wrap clearfix">
+								<div class="hot_title">
+									<div class="more">
+										<a href="#" target="_blank">查看更多></a>
+									</div>
+									<div class="title_font">音响</div>
+								</div>
+								<div class="flex_wrap" id = "ddd">
+									<!-- <div class="list_cont list_cont_three">
+										
+										<div class="hot"></div>
+										<div class="list_hover"></div>
+									</div>
+									<div class="list_cont list_cont_three">
+										
+										<div class="hot"></div>
+										<div class="list_hover"></div>
+									</div>
+									<div class="list_cont list_cont_three">
+										
+										<div class="hot"></div>
+										<div class="list_hover"></div>
+									</div>
+									<div class="list_cont list_cont_three">
+										
+										<div class="hot"></div>
+										<div class="list_hover"></div>
+									</div> -->
+								</div>
+							</div>
+					</div>
+				</div>
+			</div>
+			<!-- footer -->
+			<div class="footer">
+				<div class="link_bg">
+					<ul class="link_cont">
+						<li><span class="link_title">支付方式</span></li>
+						<li><a href="">微信支付</a></li>
+						<li><a href="">支付宝</a></li>
+					</ul>
+					<ul class="link_cont">
+						<li><span class="link_title">售后服务</span></li>
+						<li><a href="">增值税专票</a></li>
+						<li><a href="">发票无忧</a></li>
+						<li><a href="">安装维修</a></li>
+						<li><a href="">验货提醒</a></li>
+					</ul>
+					<ul class="link_cont link_phone">
+						<li><span class="link_title">400-866-5555</span></li>
+						<li class="link_time">周一至周日 7:00 - 23:00</li>
+						<li class="link_service ripple">
+							<a href=""><i>在线客服</i></a>
+						</li>
+					</ul>
+				</div>
+				<!-- footer_wrap -->
+				<div class="foot_wrap">
+					<div class="foot_cont">
+						<div class="foot_right">
+							<img src="https://shop.skyworth.com/images/footerIco1.jpg">
+						</div>
+						<div class="font_left">
+							<span>友情链接：</span><a href="#" target="_blank">酷开TV</a><br><br>
+							ICP备案证号：粤ICP备09157852号
+						</div>	
+					</div>
+				</div>
+			</div>
+			<!-- 回到顶部 -->
+			<div class="actGotop">
+				<a href="javascript:;" title="Top"></a>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+html, body, div, p, ul, li, ol, dl, dd, dt, h1, h2, h3, h4, h5, h6, form, input, fieldset, legend, section, main, aside, span {
+  margin: 0;
+  padding: 0; }
+body{
+  font-size:12px;
+}
+ul li, ol li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+b, strong, h1, h2, h3, h4, h5, h6, i, em {
+  font-weight: none;
+  font-style: normal; }
+
+.clear:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden; }
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
