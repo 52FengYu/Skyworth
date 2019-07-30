@@ -9,7 +9,7 @@ define(["jquery", "jquery-cookie","ajax"],function($){
 				var li =$("<li></li>");
 				$(`		
 					
-						<a href="#"><i class="icon_float iconfont icon-gengduojiantou"></i>${arr[i].span}</a>
+						<a href="list.html"><i class="icon_float iconfont icon-gengduojiantou"></i>${arr[i].span}</a>
 	    			
 					`)
 				.appendTo(li);
@@ -26,28 +26,30 @@ define(["jquery", "jquery-cookie","ajax"],function($){
 			//插入电视的数据
 			var i = 8;
 			var child = arr[i].child;
-			for(var j = 0; j < child.length-3; j++){
+			for(var j = 0; j < child.length-45; j++){
 				$(`
 					<div class="list_cont list_cont_two">
                             <div class="list_pro">
                                 <a href="#">
-                                	<img src="${child[j].img}">
+                                	<img src="${child[j].images}">
                                 </a>
                             </div>
                             <div class="list_bottom">
-                               	    <h5><a href="#">${child[j].h5}</a></h5>
-									<p>${child[j].title}</p>
-                                	<div class="price">${child[j].price}</div>
+                               	    <h5><a href="#">${child[j].title}</a></h5>
+									<p>${child[j].p}</p>
+                                	<div class="price">¥${child[j].price}</div>
                             </div>
-                            <div class="hot"><i></i></div>
+                            <div class="hot"><i>
+                                    <img src="${child[j].add}">
+                            </i></div>
                             <div class="list_hover">
-                                <span class="hover_price">${child[j].price}</span>
-                                <span class="shop_cart ripple" id="${child[j].id}"><a href="#">${child[j].p}</a></span>
+                                <span class="hover_price">¥${child[j].price}</span>
+                                <span class="shop_cart ripple" id="${child[j].id}"><a href="#">${child[j].span}</a></span>
                             </div>
 
 					`).appendTo("#fff");
 			}
-			for(var j = 1; j < child.length; j++){
+			for(var j = 1; j < 4; j++){
 				$(`
 					<div class="list_cont list_cont_three">
                             <div class="list_pro">
@@ -56,14 +58,14 @@ define(["jquery", "jquery-cookie","ajax"],function($){
                                 </a>
                             </div>
                             <div class="list_bottom">
-                               	    <h5><a href="#">${child[j].h5}</a></h5>
-									<p>${child[j].title}</p>
-                                	<div class="price">${child[j].price}</div>
+                               	    <h5><a href="#">${child[j].title}</a></h5>
+									<p>${child[j].p}</p>
+                                	<div class="price">¥${child[j].price}</div>
                             </div>
-                            <div class="hot"><i></i></div>
+                            <div class="hot"><i><img src="${child[j].add}"></i></div>
                             <div class="list_hover">
-                                <span class="hover_price">${child[j].price}</span>
-                                <span class="shop_cart ripple" id="${child[j].id}"><a href="#">${child[j].p}</a></span>
+                                <span class="hover_price">¥${child[j].price}</span>
+                                <span class="shop_cart ripple" id="${child[j].id}"><a href="#">${child[j].span}</a></span>
                             </div>
 
 					`).appendTo("#fff");
@@ -82,11 +84,11 @@ define(["jquery", "jquery-cookie","ajax"],function($){
                             <div class="list_bottom">
                                	    <h5><a href="#">${child[j].h5}</a></h5>
 									<p>${child[j].title}</p>
-                                	<div class="price">${child[j].price}</div>
+                                	<div class="price">¥${child[j].price}</div>
                             </div>
                             <div class="hot"><i></i></div>
                             <div class="list_hover">
-                                <span class="hover_price">${child[j].price}</span>
+                                <span class="hover_price">¥${child[j].price}</span>
                                 <span class="shop_cart ripple" id="${child[j].id}"><a href="#">${child[j].p}</a></span>
                             </div>
 
@@ -103,11 +105,11 @@ define(["jquery", "jquery-cookie","ajax"],function($){
                             <div class="list_bottom">
                                	    <h5><a href="#">${child[j].h5}</a></h5>
 									<p>${child[j].title}</p>
-                                	<div class="price">${child[j].price}</div>
+                                	<div class="price">¥${child[j].price}</div>
                             </div>
                             <div class="hot"><i></i></div>
                             <div class="list_hover">
-                                <span class="hover_price">${child[j].price}</span>
+                                <span class="hover_price">¥${child[j].price}</span>
                                 <span class="shop_cart ripple" id="${child[j].id}"><a href="#">${child[j].p}</a></span>
                             </div>
 
@@ -127,11 +129,11 @@ define(["jquery", "jquery-cookie","ajax"],function($){
                             <div class="list_bottom">
                                	    <h5><a href="#">${child[j].h5}</a></h5>
 									<p>${child[j].title}</p>
-                                	<div class="price">${child[j].price}</div>
+                                	<div class="price">¥${child[j].price}</div>
                             </div>
                             <div class="hot"><i></i></div>
                             <div class="list_hover">
-                                <span class="hover_price">${child[j].price}</span>
+                                <span class="hover_price">¥${child[j].price}</span>
                                 <span class="shop_cart ripple" id="${child[j].id}"><a href="#">${child[j].p}</a></span>
                             </div>
 
@@ -148,11 +150,11 @@ define(["jquery", "jquery-cookie","ajax"],function($){
                             <div class="list_bottom">
                                	    <h5><a href="#">${child[j].h5}</a></h5>
 									<p>${child[j].title}</p>
-                                	<div class="price">${child[j].price}</div>
+                                	<div class="price">¥${child[j].price}</div>
                             </div>
                             <div class="hot"><i></i></div>
                             <div class="list_hover">
-                                <span class="hover_price">${child[j].price}</span>
+                                <span class="hover_price">¥${child[j].price}</span>
                                 <span class="shop_cart ripple" id="${child[j].id}"><a href="#">${child[j].p}</a></span>
                             </div>
 
@@ -172,11 +174,11 @@ define(["jquery", "jquery-cookie","ajax"],function($){
                             <div class="list_bottom">
                                	    <h5><a href="#">${child[j].h5}</a></h5>
 									<p>${child[j].title}</p>
-                                	<div class="price">${child[j].price}</div>
+                                	<div class="price">¥${child[j].price}</div>
                             </div>
                             <div class="hot"><i></i></div>
                             <div class="list_hover">
-                                <span class="hover_price">${child[j].price}</span>
+                                <span class="hover_price">¥${child[j].price}</span>
                                 <span class="shop_cart ripple" id="${child[j].id}"><a href="#">${child[j].p}</a></span>
                             </div>
 
@@ -193,11 +195,11 @@ define(["jquery", "jquery-cookie","ajax"],function($){
                             <div class="list_bottom">
                                	    <h5><a href="#">${child[j].h5}</a></h5>
 									<p>${child[j].title}</p>
-                                	<div class="price">${child[j].price}</div>
+                                	<div class="price">¥${child[j].price}</div>
                             </div>
                             <div class="hot"><i></i></div>
                             <div class="list_hover">
-                                <span class="hover_price">${child[j].price}</span>
+                                <span class="hover_price">¥${child[j].price}</span>
                                 <span class="shop_cart ripple" id="${child[j].id}"><a href="#">${child[j].p}</a></span>
                             </div>
 
@@ -217,11 +219,11 @@ define(["jquery", "jquery-cookie","ajax"],function($){
                             <div class="list_bottom">
                                	    <h5><a href="#">${child[j].h5}</a></h5>
 									<p>${child[j].title}</p>
-                                	<div class="price">${child[j].price}</div>
+                                	<div class="price">¥${child[j].price}</div>
                             </div>
                             <div class="hot"><i></i></div>
                             <div class="list_hover">
-                                <span class="hover_price">${child[j].price}</span>
+                                <span class="hover_price">¥${child[j].price}</span>
                                 <span class="shop_cart ripple" id="${child[j].id}"><a href="#">${child[j].p}</a></span>
                             </div>
 
@@ -238,11 +240,11 @@ define(["jquery", "jquery-cookie","ajax"],function($){
                             <div class="list_bottom">
                                	    <h5><a href="#">${child[j].h5}</a></h5>
 									<p>${child[j].title}</p>
-                                	<div class="price">${child[j].price}</div>
+                                	<div class="price">¥${child[j].price}</div>
                             </div>
                             <div class="hot"><i></i></div>
                             <div class="list_hover">
-                                <span class="hover_price">${child[j].price}</span>
+                                <span class="hover_price">¥${child[j].price}</span>
                                 <span class="shop_cart ripple" id="${child[j].id}"><a href="#">${child[j].p}</a></span>
                             </div>
 

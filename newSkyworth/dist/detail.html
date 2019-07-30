@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>创维集团-全球商品-产品详情</title>
+	<link rel="stylesheet" href="css/login.css">
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link rel="shortcut icon" href="https://www.skyworthds.com/favicon.ico">
+	<script src='js/jquery-1.10.1.min.js'></script>
+	<script src="js/detail.js"></script>
+	<script src="js/img.js"></script>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		.showpage a {
+		    display: block;
+		    width: 25px;
+		    height: 60px;
+		    line-height: 60px;
+		    text-align: center;
+		    font-size: 18px;
+		    position: absolute;
+		    left: 0;
+		    top: 555px;
+		    text-decoration: none;
+		    color: #999;
+		    background: #f1f1f1;
+		}
+		#showlast{
+			left:40px;
+		}
+		#shownext{
+			left:400px;
+		}
+	</style>
+</head>
+<body>
+	<header class="header">
+	    <div class="head">
+	        <div class="head_left">
+	            <div class="head_position">
+	                <div class="head_welcome">欢迎您，来到创维官方商城</div>
+	            </div>
+	        </div>
+	        <div class="head_right">
+	            <ul>
+	                <li><a href="login.html">登录</a></li>
+	                <li><a href="register.html">注册</a></li>
+	                
+	                <li><a href="#">我的订单</a></li>
+	                <li class="top_li_wrap">
+	                    <a href="#">手机端
+	                        <img class="top_img_nov" src="https://shop.skyworth.com/images/little.png">
+	                        <p class="wx-tips">请使用微信扫描</p>
+	                    </a> 
+	                </li>
+	                
+	            </ul>
+	        </div>
+	    </div>
+	</header>
+	<!-- 包括创维图标、搜索框、购物车的框 -->
+	<div class="top_wrap">
+	    <div class="top_content">
+	        <div class="logo">
+	            <a href="#" target="_blank">
+	                <img src="https://shop.skyworth.com/images/logo.png"></a>
+	        </div>
+	        <div class="top_right">
+	            <div class="top_search">
+	                <div class="top_search_input">
+	                    <div class="search_input_background">
+	                        <input type="text" placeholder="输入条件" class="search_input" id="TopKeyVal">
+	                    </div>
+	                    <div class="search_input_icon ripple">
+	                        <input type="button" class="search_button" ><i class="iconfont icon-sousuo"></i>
+	                    </div>
+	                </div>
+	                <div class="top_search_label">
+	                                 <a href="#" target="_blank">OLED</a>
+	                         
+	                                 <a href="#" target="_blank">超薄</a>
+	                         
+	                                 <a href="#" target="_blank">4K超清</a>
+	                         
+	                                 <a href="#" target="_blank">全面屏</a>
+	                         
+	                                 <a href="#" target="_blank">防蓝光护眼</a>
+	                         
+	                                 <a href="#" target="_blank">大屏</a>
+	                         
+	                                 <a href="#" target="_blank">智能网络</a>
+	                        
+	                </div>
+	            </div>
+	            <div class="top_service" id="top_cart">
+					<dl class="shopcart_hover">
+					    <dt>
+					        <a href="#"><i class="iconfont icon-icon1"></i>我的购物车</a>
+					    </dt>
+					    <dd>
+					        <div class="font_number">0</div>
+					    </dd>
+					</dl>
+					<div class="shopcart_details">
+					    <p>购物车列表 <span class="closeCart iconfont icon-guanbi"></span></p>
+					    
+					    <div class="shopcart_bottom">
+					        <span>共<b>0</b>件商品</span>
+					        <span>总计<b>￥0</b></span>
+					        <input type="button" class="shopcart_button" value="去购物车">
+					    </div>
+					</div>
+				</div>
+	        </div>
+	    </div>
+	</div>
+	<!-- 商品分类的横向框 -->
+	<div class="nav no_border">
+	    <nav class="menu">
+	        <div class="menu_first">
+	            <ul class="nav_wrap">
+	                <li class="all_nav"><a style="cursor: pointer" class="all_nav_a"><i class="iconfont icon-toggle"></i>商品分类</a>
+	                    <ul class="nav_cont clearfix inside_nav" style="display: none;">
+	                        	 
+					        <li><a href="#"><i class="icon_float iconfont icon-gengduojiantou"></i>电视</a>
+					            <ul>
+					                <li><a href="#" target="_blank">OLED</a></li>
+					                <li><a href="#" target="_blank">全面屏</a></li>
+					                <li><a href="#" target="_blank">防蓝光</a></li>
+					                <li><a href="#" target="_blank">AI智能</a></li>
+					                <li><a href="#" target="_blank">4K超清</a></li>
+					                <li><a href="#" target="_blank">智能网络</a></li>
+					                <li><a href="#" target="_blank">普通电视</a></li>
+					            </ul>
+					        </li>
+	     
+					        <li><a href="#"><i class="icon_float iconfont icon-gengduojiantou"></i>盒子/投影仪</a>
+					            <ul>
+					                <li><a href="#" target="_blank">企鹅极光</a></li>
+					                <li><a href="#" target="_blank">T系</a></li>
+					                <li><a href="#" target="_blank">π系</a></li>
+					            </ul>
+					        </li>
+	     
+					        <li><a href="#"><i class="icon_float iconfont icon-gengduojiantou"></i>一体机</a>
+					            <ul>
+					                
+					            </ul>
+					        </li>
+	     
+					        <li><a href="#"><i class="icon_float iconfont icon-gengduojiantou"></i>灯饰</a>
+					            <ul>
+					                <li><a href="#" target="_blank">L1系列</a></li>
+					            </ul>
+					        </li>
+	     
+					        <li><a href="#"><i class="icon_float iconfont icon-gengduojiantou"></i>冰箱</a>
+					            <ul>
+					                <li><a href="#" target="_blank">风冷</a></li>
+					                <li><a href="#" target="_blank">直冷</a></li>
+					            </ul>
+					        </li>
+	     
+					        <li><a href="#"><i class="icon_float iconfont icon-gengduojiantou"></i>洗衣机</a>
+					            <ul>
+					                <li><a href="#" target="_blank">滚筒</a></li>
+					                <li><a href="#" target="_blank">波轮</a></li>
+					            </ul>
+					        </li>
+	     
+					        <li><a href="#"><i class="icon_float iconfont icon-gengduojiantou"></i>音响</a>
+					            <ul>
+					                
+					            </ul>
+					        </li>
+	     
+					        <li><a href="#"><i class="icon_float iconfont icon-gengduojiantou"></i>商务机</a>
+					            <ul>
+					                <li><a href="#" target="_blank">E388G系列</a></li>
+					                <li><a href="#" target="_blank">E382W系列</a></li>
+					                <li><a href="#" target="_blank">E381S系列</a></li>
+					            </ul>
+					        </li>
+	                    </ul>
+	                </li>
+	            </ul>
+	        </div>
+	        <ul class="nav_ul">
+	            <li role="topli_"><a href="home.html" target="_blank">首页</a></li>
+	            
+	 
+	                    <li class="a_active"><a href="#" target="_blank">电视</a></li>
+	                 
+	                    <li><a href="#" target="_blank">洗衣机</a></li>
+	                 
+	                    <li><a href="#" target="_blank">盒子/投影仪</a></li>
+	                 
+	                    <li><a href="#" target="_blank">冰箱</a></li>
+	                 
+	                    <li><a href="#" target="_blank">音响</a></li>
+	                 
+	                    <li><a href="#" target="_blank">商务机</a></li>
+	                 
+	                    <li><a href="#" target="_blank">灯饰</a></li>
+	                 
+	                    <li><a href="#" target="_blank">一体机</a></li>
+	                
+	        </ul>
+	    </nav>
+	</div>
+	<div class="inside_container">
+        <div class="crumb"><a href="home.html">首页</a><em>/</em><a href="list.html" target="_blank">商品列表</a><em>/</em>产品详情页</div>
+        <div class="product_wrap clearfix">
+            <div class="product_left">
+                <div class="bg_left">
+                    <div id="showbox" style="width: 500px; height: 500px; position: relative;">
+	                    <div style="width: 500px; height: 500px; top: 0px; left: 0px; position: absolute;">
+	                    	<!-- 小图 -->
+	                    	<b style="position: absolute;width: 500px; height: 500px;top:0;left:0">
+	                    		<img style="width: 500px; height: 500px;" src="https://img.coocaa.com/skyworth/product/201811020357204033.jpg">
+	                    	
+		                    	<!-- 遮罩层 -->
+		                    	<span style="position: absolute; z-index: 5; width: 250px; height: 250px; left: 0px; top: 250px; background: white;opacity: 0.5;filter: alpha(opacity=50);display: none"></span>
+	                    	</b>
+	                    </div>
+                    <!-- 大图 -->
+                    <p style="position: absolute; overflow: hidden; top: 0px; width: 500px; height: 500px; left: 510px;z-index: 10">
+                    	<img style="max-width: none; max-height: none; position: absolute; width: 1000px; height: 1000px; left: -372.8px; top: -268px;display: none" src="https://img.coocaa.com/skyworth/product/201811020357204033.jpg">
+                    </p>
+                </div>
+                <div id="showsum" style="overflow: hidden; height: 62px; width: 414px; position: relative;">
+                	<p style="position: absolute; top: 0px; width: 276px; left: 62px;">
+                	</p>
+                	<div style="clear:both;width:100%;"></div>
+                </div>
+                    <!--展示图片里边-->
+                    <p class="showpage" style="width: 500px">
+                        <a href="javascript:void(0);" id="showlast">&lt;</a>
+                        <a href="javascript:void(0);" id="shownext">&gt;</a>
+                    </p>
+                </div>
+                <div class="bg_right">
+                    <div class="bigshow">
+                        <div class="bigitem">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product_right">
+                <h1 class="pro_detail_title">65S9A</h1>
+                <h1 class="pro_detail_title_er">65寸|全面屏|变色龙AI芯片|OLED像素控光</h1>
+                <h1 class="pro_detail_title_er" style="color: red;"> </h1>
+                <h1 class="pro_detail_title_er" style="color: red;"></h1>
+                <div class="detail_wrap clearfix">
+                    <div class="detail_font">售价</div>
+                    <div class="detail_price">￥25999</div>
+                </div>
+                <div class="detail_wrap clearfix">
+                    <div class="detail_font">运费</div>
+                    <div class="detail_gray">全场包邮</div>
+                </div>
+                
+                <div class="detail_wrap clearfix">
+                    <div class="detail_font">版本</div>
+                    <div class="detail_gray">
+                        <ul class="detail_version">
+                            
+                                    <a id="1" href="#">
+                                        <li style=" border: 1px solid #2f89e4;">65S9A</li>
+                                    </a>
+                                
+                                    <a id="49" href="#">
+                                        <li>55S9A</li>
+                                    </a>
+                                
+                        </ul>
+                    </div>
+                </div>
+                <div class="detail_wrap clearfix">
+                    <div class="detail_font">数量</div>
+                    <div class="detail_gray">
+                        <a class="reduce" href="#"><i class="iconfont icon-jian"></i></a>
+                        <input type="text" value="1" id="InpQuantity" class="var_number">
+                        <a href="#" class="add"><i class="iconfont icon-jia"></i></a>
+                        <span class="detail_line">件</span>
+                    </div>
+                </div>
+                <div class="detail_wrap clearfix">
+                    <div class="detail_font">服务</div>
+                    <div class="detail_gray">由 <span style="color: red;">创维-RGB电子有限公司</span> 发货，并提供售后服务。</div>
+                </div>
+                <div class="detail_wrap clearfix">
+                    
+                    <div class="add_shop_cart ripple" id="btn_add_shop_cart">加入购物车</div>
+                    <div class="buy_now ripple" id="btn_add_l_shop_cart">立即购买</div>
+                    
+                </div>
+            </div>
+        </div>
+        <!--套餐-->
+        <div class="product_other clearfix" style="display: none">
+            <div class="other_title"><a href="#">套餐购买更优惠</a></div>
+            
+        </div>
+        <!--套餐结束-->
+        <div class="product_other all_fixed clearfix">
+            <div class="all_title">
+                <div class="clearfix width_all">
+                    <div class="main_title">猜你喜欢</div>
+                    <ul class="main_er">
+                        <li class="e_active">商品介绍</li>
+                        <li>售后服务</li>
+                        <li>商品评价</li>
+                        
+                    </ul>
+                    <div class="main_service ripple">
+                    	<a href="#" id="btn_a_add_shop_cart">
+                    		<i class="iconfont icon-icon1"></i>加入购物车
+                    	</a>
+                    </div>
+                </div>
+            </div>
+            <div class="all_content">
+                <div class="pro_main_left">
+                    <dl class="main_list">
+                        <dt><a href="https://shop.skyworth.com/Product/ProInfo.aspx?id=14648393"> 
+                            <img src="https://img.coocaa.com/skyworth/product/201807270300286613.jpg" onerror="this.src='../nopic.gif'"></a></dt>
+                        <dd class="main_price">￥159.00</dd> 
+                        <dd class="hover_bule"><a href="https://shop.skyworth.com/Product/ProInfo.aspx?id=14648393">创维盒子T1（AV线版）</a></dd>
+                    </dl>
+                                     <dl class="main_list">
+                        <dt><a href="https://shop.skyworth.com/Product/ProInfo.aspx?id=14777670"> 
+                            <img src="https://img.coocaa.com/skyworth/product/201907030553188513.jpg" onerror="this.src='../nopic.gif'"></a></dt>
+                        <dd class="main_price">￥39999.00</dd> 
+                        <dd class="hover_bule"><a href="https://shop.skyworth.com/Product/ProInfo.aspx?id=14777670">触控一体机86WBB3</a></dd>
+                    </dl>
+                                     <dl class="main_list">
+                        <dt><a href="https://shop.skyworth.com/Product/ProInfo.aspx?id=14648335"> 
+                            <img src="https://img.coocaa.com/skyworth/product/201807260507194838.jpg" onerror="this.src='../nopic.gif'"></a></dt>
+                        <dd class="main_price">￥1799.00</dd> 
+                        <dd class="hover_bule"><a href="https://shop.skyworth.com/Product/ProInfo.aspx?id=14648335">F100PC5白洗衣机</a></dd>
+                            </dl>
+                                     <dl class="main_list">
+                        <dt><a href="https://shop.skyworth.com/Product/ProInfo.aspx?id=14648329"> 
+                            <img src="https://img.coocaa.com/skyworth/product/201807260501272309.jpg" onerror="this.src='../nopic.gif'"></a></dt>
+                        <dd class="main_price">￥1249.00</dd> 
+                        <dd class="hover_bule"><a href="https://shop.skyworth.com/Product/ProInfo.aspx?id=14648329">F60A-白洗衣机</a></dd>
+                    </dl>
+                                     <dl class="main_list">
+                        <dt><a href="https://shop.skyworth.com/Product/ProInfo.aspx?id=14648307"> 
+                            <img src="https://img.coocaa.com/skyworth/product/201807260428465254.jpg" onerror="this.src='../nopic.gif'"></a></dt>
+                        <dd class="main_price">￥919</dd> 
+                        <dd class="hover_bule"><a href="https://shop.skyworth.com/Product/ProInfo.aspx?id=14648307">D16AM银冰箱</a></dd>
+                    </dl>
+                                     <dl class="main_list">
+                        <dt><a href="https://shop.skyworth.com/Product/ProInfo.aspx?id=14477426"> 
+                            <img src="https://img.coocaa.com/skyworth/product/201808070449022917.jpg" onerror="this.src='../nopic.gif'"></a></dt>
+                        <dd class="main_price">￥2799</dd> 
+                        <dd class="hover_bule"><a href="https://shop.skyworth.com/Product/ProInfo.aspx?id=14477426">50H8M</a></dd>
+                    </dl>
+                                 </div>
+                <div class="pro_main_right">
+                    <div class="main_content on">
+                        <div class="main_detail">
+                            <p><img src="https://www.ineigo.com/Editor/eWebeditor/uploadfile/20180920171623586001.jpg"><br><img src="https://www.ineigo.com/Editor/eWebeditor/uploadfile/20180920171623743002.jpg"><br><img src="https://www.ineigo.com/Editor/eWebeditor/uploadfile/20180920171623166003.jpg"><br><img src="https://www.ineigo.com/Editor/eWebeditor/uploadfile/20180920171623210004.jpg"><br><img src="https://www.ineigo.com/Editor/eWebeditor/uploadfile/20180920171623605005.jpg"><br><img src="https://www.ineigo.com/Editor/eWebeditor/uploadfile/20180920171623183006.jpg"><br><img src="https://www.ineigo.com/Editor/eWebeditor/uploadfile/20180920171623777007.jpg"><br><img src="https://www.ineigo.com/Editor/eWebeditor/uploadfile/20180920171623969008.jpg"><br><img src="https://www.ineigo.com/Editor/eWebeditor/uploadfile/20180920171624185009.jpg"><br><img src="https://www.ineigo.com/Editor/eWebeditor/uploadfile/20180920171624761010.jpg"><br><img src="https://www.ineigo.com/Editor/eWebeditor/uploadfile/20180920171624725011.jpg"><br><img src="https://www.ineigo.com/Editor/eWebeditor/uploadfile/20180920171624894012.jpg"><br><img src="https://www.ineigo.com/Editor/eWebeditor/uploadfile/20180920171624309013.jpg"><br><img src="https://www.ineigo.com/Editor/eWebeditor/uploadfile/20180920171624476014.jpg"><br><img src="https://www.ineigo.com/Editor/eWebeditor/uploadfile/20180920171624315015.jpg"><br><img src="https://www.ineigo.com/Editor/eWebeditor/uploadfile/20180920171624702016.jpg"><br><img src="https://www.ineigo.com/Editor/eWebeditor/uploadfile/20180920171624390017.jpg"><br><img src="https://www.ineigo.com/Editor/eWebeditor/uploadfile/20180920171624374018.jpg"><br><img src="https://www.ineigo.com/Editor/eWebeditor/uploadfile/20180920171625143019.jpg"><br><img src="https://www.ineigo.com/Editor/eWebeditor/uploadfile/20180920171625690020.jpg"><br><img src="https://www.ineigo.com/Editor/eWebeditor/uploadfile/20180920171625302021.jpg"><br><img src="https://www.ineigo.com/Editor/eWebeditor/uploadfile/20180920171625384022.jpg"><br><img src="https://www.ineigo.com/Editor/eWebeditor/uploadfile/20180920171625257023.jpg"><br><img src="https://www.ineigo.com/Editor/eWebeditor/uploadfile/20180920171625885024.jpg"><br><img src="https://www.ineigo.com/Editor/eWebeditor/uploadfile/20180920171625367025.jpg"><br><img src="https://www.ineigo.com/Editor/eWebeditor/uploadfile/20180920171625785026.jpg"><br><img src="https://www.ineigo.com/Editor/eWebeditor/uploadfile/20180920171625857027.jpg"><br><img src="https://www.ineigo.com/Editor/eWebeditor/uploadfile/20180920171625812028.jpg"><br><img src="https://www.ineigo.com/Editor/eWebeditor/uploadfile/20180920171625106029.jpg"><br></p>
+                        </div>
+                    </div>
+                    <div class="main_content">
+                        <div class="main_data">
+                            <p><img src="#"><img src="https://img.coocaa.com/skyworth/details/sh2.jpg"><img src="https://img.coocaa.com/skyworth/details/sh3.jpg"></p>
+                        </div>
+                    </div>
+                    
+                    <div class="main_content">
+                        <div class="main_data" id="comment"></div>
+                        <div class="pagger-box pagger" id="box"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>        
+		<footer class="footer">
+		    
+		    <div class="link_wrap">
+		        <div class="link_bg">
+		            
+		                    <ul class="link_cont">
+		                        <li><span class="link_title">支付方式</span></li>
+		                        
+		                                <li><a href="#">微信支付</a></li>
+		                            
+		                                <li><a href="#">支付宝</a></li>
+		                            
+		                    </ul>
+		                
+		                    <ul class="link_cont">
+		                        <li><span class="link_title">售后服务</span></li>
+		                        
+		                                <li><a href="#">增值税专票</a></li>
+		                            
+		                                <li><a href="#">发票无忧</a></li>
+		                            
+		                                <li><a href="#">安装维修</a></li>
+		                            
+		                                <li><a href="#">验货提醒</a></li>
+		                            
+		                    </ul>
+		                
+		            
+		            <ul class="link_cont link_phone">
+		                <li><span class="link_title">400-866-5555</span></li> 
+		                <li class="link_time">周一至周日 7:00 - 23:00</li>
+		                <li class="link_service ripple"><a class="float" href="#" rel="nofollow"><i class="iconfont icon-kefu"></i>在线客服</a></li> 
+		            </ul>
+		        </div>
+		    </div>
+		    <div class="foot_wrap">
+		        <div class="foot_cont">
+		            <div class="foot_right">
+		                <img src="https://shop.skyworth.com/images/footerIco1.jpg">
+		            </div>
+		            <div class="font_left">
+		                友情链接：<a href="#" target="_blank">酷开TV</a><br> 
+		                ICP备案证号：粤ICP备09157852号
+		            </div>
+		        </div>
+		    </div>
+		</footer>
+		<div class="floatNav">
+			<a class="float" href="#" rel="nofollow"><span class="preSales"></span></a>
+			<a class="float" href="#" target="_blank"><span class="afterSales"></span></a>
+		    <a class="float btnBackTop" href="#" style="display: none;"><span class="backTop_ic"></span></a>
+		</div>
+	</div>
+</body>
+</html>
