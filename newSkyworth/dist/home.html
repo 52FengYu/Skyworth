@@ -9,43 +9,20 @@
 		<link href="css/iconfont.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" type="text/css" href="css/reset.css">
 		<link rel="stylesheet" type="text/css" href="css/login.css">
-		<!-- <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
-		<script src="js/common.js"></script>
-		<script type="text/javascript" src="js/jquery.cookie.js"></script> -->
+		<script src="js/jquery-1.10.1.min.js"></script>
 		<script src="js/require.js" defer async="true" data-main="js/home-main"></script>
-<!-- 		<script>
-		$(function(){
-			$.ajax({
-			url: "data/home.json",
-			success: function(arr){
-				//通过循环，将数据添加到我们的页面上
-				for(var i = 0; i < 8; i ++){
-					var ul = $("<ul></ul>");
-					var li =$("<li></li>");
-					$(`		
-						
-							<a href="#"><i class="icon_float iconfont icon-gengduojiantou"></i>${arr[i].span}</a>
-		       	 				
-						`)
-					.appendTo(li);
-					var child = arr[i].child;
-					for(var j = 0; j < child.length ; j ++){
-						$(`
-							<li><a href="#" target="_blank" >${child[j].title}</a></li>
-							`).appendTo(ul);
-	
-					}
-						ul.appendTo(li);
-						li.appendTo(".nav_cont");
-				}
-			},
-			error: function(msg){
-				alert("请求错误：" + msg);
-			}
-		})
-	})
+		<script>
+			$(function(){
+				$("#top_cart").on("mouseenter",function(){
+					$(".shopcart_details").show();
+				})
+				$("#top_cart").on("mouseleave",function(){
+					$(".shopcart_details").hide();
+				})
+			})
 		</script>
-	 -->	
+	</head>
+
 	 <style>
 	 	.top_li_wrap .top_img_nov {
 			 top: 40px;
@@ -98,7 +75,7 @@
 								<input type="text" placeholder="输入条件" class="search_input" id = "TopKeyVal">
 							</div>
 							<div class="search_input_icon ripple">
-								<input type="button" class="search_button" onclick="keySelect();"><i onclick="keySelect();" class="iconfont icon-sousuo"></i>
+								<input type="button" class="search_button" ><i class="iconfont icon-sousuo"></i>
 							</div>
 						</div>
 						<div class="top_search_label">
@@ -123,14 +100,10 @@
 						<div class="shopcart_details">
 							<p>购物车列表<span class="closeCart iconfont icon-guanbi"></span></p>
 							<div class="shopcart_bottom">
-								<span>
-									共<b>0</b>件商品	
-								</span>
-								<span>
-									总计<b>￥0</b>
-								</span>
-								<input type="button" class="shopcart_button" value="去购物车">	
-							</div>
+						        <span>共<b>0</b>件商品</span>
+						        <span>总计<b>￥0</b></span>
+						        <input type="button" class="shopcart_button" value="去购物车">
+					    </div>
 						</div>
 					</div>
 				</div>
@@ -211,27 +184,11 @@
 					<div class="main_wrap clearfix">
 						<div class="hot_title">
 							<div class="more">
-								<a href="#" target="_blank">查看更多></a>
+								<a href="list.html" target="_blank">查看更多></a>
 							</div>
 							<div class="title_font">电视</div>
 						</div>
 						<div class="flex_wrap" id = "fff">
-							<!-- <div class="list_cont list_cont_three">
-			
-								<div class="hot"></div>
-							</div>
-							<div class="list_cont list_cont_three">
-								
-								<div class="hot"></div>
-							</div>
-							<div class="list_cont list_cont_three">
-								
-								<div class="hot"></div>
-							</div>
-							<div class="list_cont list_cont_three">
-								
-								<div class="hot"></div>
-							</div> -->
 						</div>
 					</div>
 					<!-- 第二栏产品 -->
@@ -243,18 +200,6 @@
 							<div class="title_font">盒子/投影仪</div>
 						</div>
 						<div class="flex_wrap" id = "sss">
-							<!-- <div class="list_cont list_cont_two">
-								<div class="hot"></div>
-							</div>
-							<div class="list_cont list_cont_four">
-								
-								<div class="hot"></div>
-							</div>
-							<div class="list_cont list_cont_four">
-								
-								<div class="hot"></div>
-								<div class="list_hover"></div>
-							</div> -->
 						</div>
 					</div>
 				</div>
@@ -271,26 +216,6 @@
 							<div class="title_font">冰箱</div>
 						</div>
 						<div class="flex_wrap" id = "aaa">
-							<!-- <div class="list_cont list_cont_three">
-								
-								<div class="hot"></div>
-								<div class="list_hover"></div>
-							</div>
-							<div class="list_cont list_cont_three">
-								
-								<div class="hot"></div>
-								<div class="list_hover"></div>
-							</div>
-							<div class="list_cont list_cont_three">
-								
-								<div class="hot"></div>
-								<div class="list_hover"></div>
-							</div>
-							<div class="list_cont list_cont_three">
-								
-								<div class="hot"></div>
-								<div class="list_hover"></div>
-							</div> -->
 						</div>
 					</div>
 					<!-- 第二栏产品 -->
@@ -302,19 +227,6 @@
 							<div class="title_font">洗衣机</div>
 						</div>
 						<div class="flex_wrap" id = "bbb">
-							<!-- <div class="list_cont list_cont_two">
-								
-								<div class="hot"></div>
-							</div>
-							<div class="list_cont list_cont_four">
-								
-								<div class="hot"></div>
-								<div class="list_hover"></div>
-							</div>
-							<div class="list_cont list_cont_four">
-								
-								<div class="hot"></div>
-								<div class="list_hover"></div> -->
 							</div>
 						</div>
 						<div class="main_wrap clearfix">
@@ -325,26 +237,6 @@
 									<div class="title_font">音响</div>
 								</div>
 								<div class="flex_wrap" id = "ddd">
-									<!-- <div class="list_cont list_cont_three">
-										
-										<div class="hot"></div>
-										<div class="list_hover"></div>
-									</div>
-									<div class="list_cont list_cont_three">
-										
-										<div class="hot"></div>
-										<div class="list_hover"></div>
-									</div>
-									<div class="list_cont list_cont_three">
-										
-										<div class="hot"></div>
-										<div class="list_hover"></div>
-									</div>
-									<div class="list_cont list_cont_three">
-										
-										<div class="hot"></div>
-										<div class="list_hover"></div>
-									</div> -->
 								</div>
 							</div>
 					</div>

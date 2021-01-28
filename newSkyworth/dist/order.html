@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<link rel="stylesheet" href="css/login.css">
+	<link rel="shortcut icon" href="https://www.skyworthds.com/favicon.ico">
+	<link rel="stylesheet" href="css/iconfont.css">
+	<script src="js/jquery-1.10.1.min.js"></script>
+	<script src="js/jquery.cookie.js"></script>
+	<script src="js/order.js"></script>
+</head>
+<body>
+	<header class="header">
+	    <div class="head">
+	        <div class="head_left">
+	            <div class="head_position">
+	                <div class="head_welcome">欢迎您，来到创维官方商城</div>
+	            </div>
+	        </div>
+	        <div class="head_right">
+	            <ul>
+	                <li><a href="https://shop.skyworth.com/login.aspx">登录</a></li>
+	                <li><a href="https://shop.skyworth.com/LogReg.aspx">注册</a></li>
+	                
+	                <li><a href="https://shop.skyworth.com/Member/MyOrders.aspx">我的订单</a></li>
+	                <li class="top_li_wrap">
+	                    <a href="javascript::">手机端
+	                        <img class="top_img_nov" src="https://shop.skyworth.com/images/little.png">
+	                        <p class="wx-tips">请使用微信扫描</p>
+	                    </a> 
+	                </li>
+	                
+	            </ul>
+	        </div>
+	    </div>
+	</header>
+	<!-- 包括创维图标、搜索框、购物车的框 -->
+	<div class="top_wrap">
+	    <div class="top_content">
+	        <div class="logo">
+	            <a href="#" target="_blank">
+	                <img src="https://shop.skyworth.com/images/logo.png"></a>
+	        </div>
+	        <div class="top_right">
+	            <div class="top_search">
+	                <div class="top_search_input">
+	                    <div class="search_input_background">
+	                        <input type="text" placeholder="输入条件" class="search_input" id="TopKeyVal">
+	                    </div>
+	                    <div class="search_input_icon ripple">
+	                        <input type="button" class="search_button" ><i class="iconfont icon-sousuo"></i>
+	                    </div>
+	                </div>
+	                <div class="top_search_label">
+	                                 <a href="#" target="_blank">OLED</a>
+	                         
+	                                 <a href="#" target="_blank">超薄</a>
+	                         
+	                                 <a href="#" target="_blank">4K超清</a>
+	                         
+	                                 <a href="#" target="_blank">全面屏</a>
+	                         
+	                                 <a href="#" target="_blank">防蓝光护眼</a>
+	                         
+	                                 <a href="#" target="_blank">大屏</a>
+	                         
+	                                 <a href="#" target="_blank">智能网络</a>
+	                        
+	                </div>
+	            </div>
+	            <div class="top_service" id="top_cart">
+					<dl class="shopcart_hover">
+					    <dt>
+					        <a href="#"><i class="iconfont icon-icon1"></i>我的购物车</a>
+					    </dt>
+					    <dd>
+					        <div class="font_number">0</div>
+					    </dd>
+					</dl>
+					<div class="shopcart_details">
+					    <p>购物车列表 <span class="closeCart iconfont icon-guanbi"></span></p>
+					    
+					    <div class="shopcart_bottom">
+					        <span>共<b>0</b>件商品</span>
+					        <span>总计<b>￥0</b></span>
+					        <input type="button" class="shopcart_button" value="去购物车">
+					    </div>
+					</div>
+				</div>
+	        </div>
+	    </div>
+	</div>
+	<!-- 商品分类的横向框 -->
+	<div class="nav no_border">
+	    <nav class="menu">
+	        <div class="menu_first">
+	            <ul class="nav_wrap">
+	                <li class="all_nav"><a style="cursor: pointer" class="all_nav_a"><i class="iconfont icon-toggle"></i>商品分类</a>
+	        </div>
+	        <ul class="nav_ul">
+	            <li role="topli_"><a href="home.html" target="_blank">首页</a></li>
+	            
+	 
+	                    <li class="a_active"><a href="#" target="_blank">电视</a></li>
+	                 
+	                    <li><a href="#" target="_blank">洗衣机</a></li>
+	                 
+	                    <li><a href="#" target="_blank">盒子/投影仪</a></li>
+	                 
+	                    <li><a href="#" target="_blank">冰箱</a></li>
+	                 
+	                    <li><a href="#" target="_blank">音响</a></li>
+	                 
+	                    <li><a href="#" target="_blank">商务机</a></li>
+	                 
+	                    <li><a href="#" target="_blank">灯饰</a></li>
+	                 
+	                    <li><a href="#" target="_blank">一体机</a></li>
+	                
+	        </ul>
+	    </nav>
+	</div>
+
+	<div class="inside_container">
+        <section class="cartMain">
+            <div class="cartMain_hd">
+                <ul class="order_lists cartTop">
+                    <li class="list_chk">
+                        <div class="checkboxFive">
+                            <input type="checkbox" id="checkboxFiveInput" value="-1" class="whole_check" onclick="selectAll(this);" />
+                            <label for="checkboxFiveInput"></label>
+                        </div>
+                    </li>
+                    <li class="list_con">商品信息</li>
+                    <li class="list_price">单价</li>
+                    <li class="list_amount">数量</li>
+                    <li class="list_sum">金额</li>
+                    <li class="list_op">操作</li>
+                </ul>
+            </div>
+ 			<div class="cartBox">
+            	<div class="order_content">
+				<!-- 内容 -->
+            	</div>
+            </div>
+
+			<div class="bar-wrapper">
+                <div class="bar-left">
+                    <div class="content_all">
+                        <div class="checkboxFive">
+                            <input type="checkbox" value="-1" id="checkboxFiveInput6" class="checkbox" onclick="selectAll(this)" />
+                            <label for="checkboxFiveInput6"></label>
+                        </div>
+                        <span class="cancel_all">取消全选</span>
+                    </div>
+                    
+                    <div class="content_all goon_shop" onclick="location.href = 'list.html'"><a href="void(0)" target="_blank">继续购物</a></div>
+                </div>
+                <div class="bar-right">
+                    <div class="piece">已选商品<strong class="piece_num piece_blue" id="cnum">0</strong>件</div>
+                    <div class="totalMoney">共计: <strong class="total_text" id="cprice">0</strong></div>
+                    <div class="calBtn"><a onclick="locOrder();" class="btn_sty" style="cursor: pointer;">结算</a></div>
+                </div>
+            </div>
+        </section>
+		<footer class="footer">
+    
+		    <div class="link_wrap">
+		        <div class="link_bg">
+		            
+		                    <ul class="link_cont">
+		                        <li><span class="link_title">支付方式</span></li>
+		                        
+		                                <li><a href=" ">微信支付</a></li>
+		                            
+		                                <li><a href=" ">支付宝</a></li>
+		                            
+		                    </ul>
+		                
+		                    <ul class="link_cont">
+		                        <li><span class="link_title">售后服务</span></li>
+		                        
+		                                <li><a href=" ">增值税专票</a></li>
+		                            
+		                                <li><a href=" ">发票无忧</a></li>
+		                            
+		                                <li><a href=" ">安装维修</a></li>
+		                            
+		                                <li><a href=" ">验货提醒</a></li>
+		                            
+		                    </ul>
+		                
+		            
+		            <ul class="link_cont link_phone">
+		                <li><span class="link_title">400-866-5555</span></li> 
+		                <li class="link_time">周一至周日 7:00 - 23:00</li>
+		                <li class="link_service ripple"><a class="float" href="javascript:;"><i class="iconfont icon-kefu"></i>在线客服</a></li> 
+		            </ul>
+		        </div>
+		    </div>
+		    <div class="foot_wrap">
+		        <div class="foot_cont">
+		            <div class="foot_right">
+		                <img src="https://shop.skyworth.com/images/footerIco1.jpg">
+		            </div>
+		            <div class="font_left">
+		                友情链接：<a href="http://www.coocaa.com/" target="_blank">酷开TV</a><br> 
+		                ICP备案证号：粤ICP备09157852号
+		            </div>
+		        </div>
+		    </div>
+		</footer>
+		<div class="floatNav">
+			<a class="float" href="javascript:;" rel="nofollow" onclick="javascript:window.open('http://q.url.cn/cdrwhj?_type=wpa&amp;qidian=true', '_blank', 'height=600, width=732,toolbar=no,scrollbars=no,menubar=no,status=no');"><span class="preSales"></span></a>
+			<a class="float" href="https://95105555.qiyukf.com/client?k=bc143c6889992756c4785e73e77a33f5&amp;wp=1" target="_blank"><span class="afterSales"></span></a>
+		    <a class="float btnBackTop" href="#" style="display: block;"><span class="backTop_ic"></span></a>
+		</div>
+		<section class="model_bg"></section>
+	    <section class="my_model">
+	        <p class="title">移除宝贝<span class="closeModel iconfont icon-guanbi"></span></p>
+	        <p class="model_content"><i class="iconfont icon-tishi"></i>您确认要移除该宝贝吗？</p>
+	        <div class="opBtn"><a href="javascript:;" class="dialog-sure" id="dialog-sure">确定</a><a href="javascript:;" class="dialog-close">关闭</a></div>
+	    </section>
+
+</body>
+</html>

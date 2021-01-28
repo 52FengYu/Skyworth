@@ -1,0 +1,22 @@
+[
+	{
+		"span":"展示图",
+		"child":[
+			{
+				"id":1,
+				"img":"https://img.coocaa.com/skyworth/product/201811020357214812.jpg"
+			},
+			{
+				"id":2,
+				"img":"https://img.coocaa.com/skyworth/product/201811020357204033.jpg"
+			},
+			{
+				"id":3,
+				"img":"https://img.coocaa.com/skyworth/product/201811020357202386.jpg"
+			},{
+				"id":4,
+				"img":"https://img.coocaa.com/skyworth/product/201811020357216494.jpg"
+			}
+		]
+	}
+]
